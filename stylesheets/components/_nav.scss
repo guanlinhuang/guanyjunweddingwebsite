@@ -1,0 +1,140 @@
+//橫向導覽列
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0em;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+  }
+
+  a{
+    margin-right: auto;
+  }
+
+  .logo{
+    height: 60px;
+    padding-left: 10px;
+  }
+
+  .down {
+    height: 0;
+    overflow: hidden;
+    transition: all 400ms;
+  }
+  
+  .up {
+    transition: all 400ms;
+    height: 60px;
+  }
+
+//漢堡選單效果
+/*
+選單線
+*/
+.line {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    //padding: 16px;
+    // position: fixed; //註解這屬性，就可以跟橫向導覽列一起隱藏
+    z-index: 2;
+}
+.line .menu,
+.line .menu::before,
+.line .menu::after {
+    background: #222;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease .1s, top ease .1s .1s, transform ease .1s;
+    width: 20px;
+}
+.line .menu {
+    right: 18px;
+    z-index: 4;
+    top: 30px;
+}
+
+.line .menu::before {
+    top: -10px;
+}
+
+.line .menu::after {
+    top: 10px;
+}
+/*
+點選選單變叉叉
+*/
+#menu:checked + .line .menu {
+    background: transparent;
+}
+
+#menu:checked + .line .menu::before {
+    transform: rotate(45deg);
+}
+
+#menu:checked + .line .menu::after {
+    transform: rotate(-45deg);
+}
+
+#menu:checked + .line .menu::before,
+#menu:checked + .line .menu::after {
+    top: 0;
+    transition: top ease .1s, transform ease .1s .1s;
+}
+
+/*
+選單開合
+*/
+#menu:checked ~ .menu-list {
+    width: 300px; // 開合方向height或width
+}
+
+.menu-list {
+    width: 0px;
+    height: 100vh;
+    background: #fff;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    position: fixed;
+    z-index: 1;
+    transition: all .6s;
+    overflow: hidden;
+
+}
+/*
+選單向外推
+*/
+.menu-list ul {
+    display:block;
+    list-style: none;
+    margin-top: 60px;
+    padding: 0;
+  
+}
+
+.menu-list ul>li{
+    display:block;
+    width:250px;
+    text-align: center;
+}
+
+.menu-list ul>li>a{
+    display:block;
+    text-decoration: none;
+    color: #000;
+}
+/*
+隱藏核許框
+*/
+input#menu {
+ display: none;
+}
