@@ -12131,7 +12131,7 @@ input#menu {
   right: 0px;
   bottom: 0px;
   height: 900px;
-  background-image: url(/images/DSC_1536.jpg);
+  background-image: url("/images/DSC_1536.jpg");
 }
 
 .bg-attachment-fixed {
