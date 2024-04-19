@@ -12126,6 +12126,9 @@ input#menu {
   background-size: cover;
   background-position: 25% center;
   background-repeat: no-repeat;
+}
+
+.immg {
   top: 0px;
   left: 0px;
   right: 0px;
