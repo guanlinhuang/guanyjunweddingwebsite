@@ -1,4 +1,8 @@
 //橫向導覽列
+.box{
+    height: 70px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,8 +22,8 @@
   }
 
   .logo{
-    height: 60px;
-    padding-left: 10px;
+    height: 70px;
+    padding-left: 15px;
   }
 
   .down {
@@ -30,7 +34,7 @@
   
   .up {
     transition: all 400ms;
-    height: 60px;
+    height: 70px;
   }
 
 //漢堡選單效果
@@ -38,8 +42,8 @@
 選單線
 */
 .line {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 70px;
     background: transparent;
     cursor: pointer;
     display: block;
@@ -53,23 +57,27 @@
     background: #222;
     content: '';
     display: block;
-    height: 2px;
+    height: 5px;
+    border-radius: 5px;
     position: absolute;
     transition: background ease .1s, top ease .1s .1s, transform ease .1s;
-    width: 20px;
+    width: 40px;
 }
 .line .menu {
-    right: 18px;
+    right: 30px;
     z-index: 4;
-    top: 30px;
+    top: 35px;
 }
 
 .line .menu::before {
-    top: -10px;
+    top: -13px;
+    right: 5px;
+
 }
 
 .line .menu::after {
-    top: 10px;
+    top: 13px;
+    right: -5px;
 }
 /*
 點選選單變叉叉
@@ -80,10 +88,12 @@
 
 #menu:checked + .line .menu::before {
     transform: rotate(45deg);
+    right: 0;
 }
 
 #menu:checked + .line .menu::after {
     transform: rotate(-45deg);
+    right: 0;
 }
 
 #menu:checked + .line .menu::before,
