@@ -12123,6 +12123,7 @@ input#menu {
 }
 
 .bg-cover {
+  height: 840px;
   background-size: cover;
   background-position: 40% center;
   background-repeat: no-repeat;
