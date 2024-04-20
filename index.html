@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./stylesheets/all.css">
     <script src="./javascripts/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -14,13 +15,14 @@
     </style>
 </head>
 
-<body>
+<body style="color: #7F4F21;">
     <nav class="nav-box d-flex flex-row-reverse box">
         <input type="checkbox" id="menu">
         <label for="menu" class="line">
             <div class="menu"></div>
         </label>
         <a href="#"><img class="logo" src="./images/畫像.png" alt=""></a>
+        <div class="asd"></div>
         <div class="menu-list d-flex flex-row-reverse">
             <ul>
                 <li><a href="#">選單一</a></li>
@@ -31,22 +33,45 @@
                 <li><a href="#">選單六</a></li>
             </ul>
         </div>
+
     </nav>
     <div class="cover">
         <div class="position-relative" style="overflow: hidden;">
-            <div class="bg-cover bg-attachment-fixed"  style="top: 0px; left: 0px;right: 0px;bottom: 0px; height:900px;background-image:url(./images/DSC_1536.jpg)">
+            <div class="bg-cover bg-attachment-fixed"
+                style="top: 0px; left: 0px;right: 0px;bottom: 0px; height:900px;background-image:url(./images/DSC_1536.jpg)">
             </div>
-            <div class="position-absolute translate-middle text-center text-black font-family"  style="top:35%; left:130px;font-size:120px;">
+            <div class="position-absolute translate-middle text-center text-black font-family"
+                style="top:35%; left:130px;font-size:120px;">
                 <p class="lh-1">Guan</p>
                 <p class="lh-1" style="font-size: 60px;">&</p>
                 <p class="lh-1">Jyun</p>
             </div>
         </div>
     </div>
-    <section class="m-4">
+    <section class="introduction m-4">
         <h2>新人介紹</h2>
         <div class="line2"></div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="d-flex justify-content-evenly align-items-center text-center mt-4 mb-5">
+            <div class="groom">
+                <h2>新郎</h2>
+                <div class="m-auto"
+                    style="border-radius: 0 25% 25% 25%; width: 120px;height: 150px;background-color: #7F4F21;"></div>
+                <p class="pt-2 pb-2 fs-1">黃冠霖</p>
+                <p>男方家長</p>
+                <p class="lh-1">楊超智</p>
+            </div>
+            <div>
+                <p>&</p>
+            </div>
+            <div class="bride">
+                <h2>新娘</h2>
+                <div class="m-auto"
+                    style="border-radius: 25% 0 25% 25%; width: 120px;height: 150px;background-color: #7F4F21;"></div>
+                <p class="pt-2 pb-2 fs-1">劉羿君</p>
+                <p>女方家長</p>
+                <p class="lh-1">劉順彥&朱巧吟</p>
+            </div>
+        </div>
     </section>
     <section class="about m-4">
         <h2>關於我們</h2>
@@ -75,9 +100,63 @@
             src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" style="width: 100%;">
     </section>
-    <section class="vedio m-4">
+    <section class="video m-4">
         <h2>強檔院線</h2>
         <div class="line2"></div>
+        <div class="wrap">
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="./images/DSC_1453.jpg" alt="">
+                    </div>
+                    <span>1</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="./images/DSC_1536.jpg" alt="">
+                    </div>
+                    <span>2</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="./images/DSC_1553.jpg" alt="">
+                    </div>
+                    <span>3</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="./images/DSC_1576.jpg" alt="">
+                    </div>
+                    <span>4</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="https://images.pexels.com/photos/8241135/pexels-photo-8241135.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <span>5</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cont">
+                    <div class="img-wrap">
+                      <img src="https://images.pexels.com/photos/7163689/pexels-photo-7163689.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <span>6</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
     <section class="blessing m-4">
@@ -94,6 +173,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./javascripts/all.js"></script>
 </body>
 

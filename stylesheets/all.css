@@ -12083,10 +12083,24 @@ a {
   width: 300px;
 }
 
+#menu:checked ~ .asd {
+  width: 100%;
+}
+
 .menu-list {
-  width: 0px;
+  width: 0;
   height: 100vh;
   background: #fff;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+.asd {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 100vh;
   position: fixed;
   z-index: 1;
   transition: all 0.6s;
@@ -12124,7 +12138,6 @@ input#menu {
 
 .bg-cover {
   width: 100%;
-  height: 800px;
   background-size: cover;
   background-position: 40% center;
   background-repeat: no-repeat;
@@ -12138,4 +12151,83 @@ input#menu {
 
 .bg-attachment-fixed {
   background-attachment: fixed;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  height: 400px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 300px;
+  transition: none;
+}
+
+.swiper-slide .cont {
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+.swiper-slide span {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.changing,
+.changed {
+  transform: translateX(-100px);
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.changing {
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+.changed {
+  transition: none;
+}
+
+.changing.swiper-slide-active,
+.changed.swiper-slide-active {
+  transform: translateX(0);
+}
+
+.swiper-slide-active ~ .changing,
+.swiper-slide-active ~ .changed {
+  transform: translateX(100px);
+}
+
+.changing .img-wrap,
+.changed .img-wrap {
+  transform-origin: center bottom;
+}
+
+.changing .img-wrap {
+  transition: transform 0.3s;
+}
+
+.changed .img-wrap {
+  transition: none;
+}
+
+.changing.swiper-slide-active .img-wrap,
+.changed.swiper-slide-active .img-wrap {
+  transform: scale(1.66);
 }/*# sourceMappingURL=all.css.map */

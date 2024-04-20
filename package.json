@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
@@ -9,4 +10,3 @@
     "precss": "^4.0.0"
   }
 }
-

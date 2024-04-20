@@ -108,9 +108,13 @@
 #menu:checked ~ .menu-list {
     width: 300px; // 開合方向height或width
 }
+#menu:checked ~ .asd {
+    width: 100%; // 開合方向height或width
+}
+
 
 .menu-list {
-    width: 0px;
+    width: 0;
     height: 100vh;
     background: #fff;
     // box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
@@ -120,6 +124,16 @@
     overflow: hidden;
 
 }
+
+.asd{
+    backdrop-filter:blur(5px);
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    transition: all .6s;
+    overflow: hidden;
+}
+
 /*
 選單向外推
 */
