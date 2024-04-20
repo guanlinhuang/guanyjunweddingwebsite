@@ -12124,7 +12124,7 @@ input#menu {
 
 .bg-cover {
   width: 100%;
-  min-height: 100vh;
+  height: 800px;
   background-size: cover;
   background-position: 40% center;
   background-repeat: no-repeat;
