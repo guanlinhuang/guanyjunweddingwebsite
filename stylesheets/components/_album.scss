@@ -1,79 +1,204 @@
-.wrap {
-    width:100%;
-    overflow:hidden;
+// .wrap {
+//     width:100%;
+//     overflow:hidden;
     
-  }
-  .swiper-container {
-    width:100%;
-    margin:0 auto;
-    overflow:visible;
-    height:400px;
-  }
+//   }
+//   .swiper-container {
+//     width:100%;
+//     margin:0 auto;
+//     overflow:visible;
+//     height:400px;
+//   }
   
+//   .swiper-slide {
+//     display:flex;
+//     justify-content:center;
+//     align-items:flex-end;
+//     width:300px;
+//     transition:none;
+//   }
+  
+//   .swiper-slide .cont {
+//     text-align:center;
+//   }
+  
+//   .swiper-slide img {
+//     width:100%;
+//     display:block;
+//   }
+//   .swiper-slide span {
+//     display:inline-block;
+//     margin-top:20px;
+//   }
+  
+//   .changing,
+//   .changed {  
+//     transform:translateX(-100px);
+//     -ms-user-select: none; 
+//     -moz-user-select: -moz-none;
+//     -khtml-user-select: none;
+//     -webkit-user-select: none;
+//     user-select: none;
+//   }
+  
+//   .changing {
+//     transition:transform 0.3s;
+//     pointer-events:none;
+//   }
+  
+//   .changed {  
+//     transition:none;
+//   }
+  
+//   .changing.swiper-slide-active,
+//   .changed.swiper-slide-active {
+//     transform:translateX(0);
+//   }
+  
+//   .swiper-slide-active ~ .changing,
+//   .swiper-slide-active ~ .changed {
+//     transform:translateX(100px);
+//   }
+  
+//   .changing .img-wrap,
+//   .changed .img-wrap {
+//     transform-origin:center bottom;
+//   }
+  
+//   .changing .img-wrap {
+//     transition:transform 0.3s;
+//   }
+  
+//   .changed .img-wrap {  
+//     transition:none;
+//   }
+  
+//   .changing.swiper-slide-active .img-wrap,
+//   .changed.swiper-slide-active .img-wrap {
+//     transform:scale(1.66);
+//   }
+
+$breakpoint: 480px;
+// You also need to change the JS breakpoint.
+
+html,
+body {
+  position: relative;
+//   height: 100%;
+}
+
+// body {
+//   background: #000;
+//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   color: #000;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+//   @media (min-width: $breakpoint) {
+//     min-height: //320px;
+//   }
+  &-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    // @media (min-width: $breakpoint) {
+    //   flex-flow: row nowrap;
+    // }
+    // height: 100vh;
+    // width: 100vw;
+  }
+}
+
+.swiper-button {
+  &-next,
+  &-prev {
+    color: #000;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  /* Slide content */
+  .description,
+  .title {
+    display: block;
+    opacity: 0;
+    transition: 0.5s ease 0.5s;
+  }
+  &-active {
+    .description,
+    .title {
+      opacity: 1;
+    }
+    .title {
+      margin-bottom: 0.5rem;
+      font-size: 24px;
+      color: #000;
+      transition: opacity 0.5s ease 0.5s;
+    }
+    .description {
+      font-size: 16px;
+      color: #777;
+      transition: opacity 0.5s ease 0.75s;
+    }
+  }
+}
+
+//原圖排列
+.gallery-top {
+  position: relative;
+  width: 100%;
+  height: 300px;//75vh;
+//   @media (min-width: $breakpoint) {
+//     width: 80%;
+//     height: 100vh;
+//     margin-right: 10px;
+//   }
+}
+//縮圖排列
+.gallery-thumbs {
+  width: 100%;
+  height: 20vh;
+  padding-top: 10px;
+//   @media (min-width: $breakpoint) {
+//     width: 20%;
+//     height: 100vh;
+//     padding: 0;
+//   }
+  .swiper-wrapper {
+    flex-direction: row;
+    // @media (min-width: $breakpoint) {
+    //   flex-direction: column;
+    // }
+  }
   .swiper-slide {
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    width:300px;
-    transition:none;
+    //width: 25%;
+    //flex-flow: row nowrap;
+    // @media (min-width: $breakpoint) {
+    //   flex-flow: column nowrap;
+    //   width: 100%;
+    // }
+    height: 50%;//100%;
+    opacity: 0.3;//0.75; //透明度
+    cursor: pointer;
   }
-  
-  .swiper-slide .cont {
-    text-align:center;
+  .swiper-slide-thumb-active {
+    opacity: 1;
   }
-  
-  .swiper-slide img {
-    width:100%;
-    display:block;
-  }
-  .swiper-slide span {
-    display:inline-block;
-    margin-top:20px;
-  }
-  
-  .changing,
-  .changed {  
-    transform:translateX(-100px);
-    -ms-user-select: none; 
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  
-  .changing {
-    transition:transform 0.3s;
-    pointer-events:none;
-  }
-  
-  .changed {  
-    transition:none;
-  }
-  
-  .changing.swiper-slide-active,
-  .changed.swiper-slide-active {
-    transform:translateX(0);
-  }
-  
-  .swiper-slide-active ~ .changing,
-  .swiper-slide-active ~ .changed {
-    transform:translateX(100px);
-  }
-  
-  .changing .img-wrap,
-  .changed .img-wrap {
-    transform-origin:center bottom;
-  }
-  
-  .changing .img-wrap {
-    transition:transform 0.3s;
-  }
-  
-  .changed .img-wrap {  
-    transition:none;
-  }
-  
-  .changing.swiper-slide-active .img-wrap,
-  .changed.swiper-slide-active .img-wrap {
-    transform:scale(1.66);
-  }
+}
