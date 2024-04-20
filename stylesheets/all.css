@@ -12159,8 +12159,7 @@ input#menu {
   background-attachment: fixed;
 }
 
-html,
-body {
+.swiper-container-wrapper {
   position: relative;
 }
 

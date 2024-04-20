@@ -81,8 +81,7 @@
 $breakpoint: 480px;
 // You also need to change the JS breakpoint.
 
-html,
-body {
+.swiper-container-wrapper {
   position: relative;
 //   height: 100%;
 }
