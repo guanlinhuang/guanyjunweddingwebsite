@@ -12143,20 +12143,13 @@ input#menu {
 }
 
 .bg-cover {
-  width: 100%;
   background-size: cover;
   background-position: 40% center;
   background-repeat: no-repeat;
-  /*移除預設樣式*/
-  -webkit-appearance: none;
-  /* Safari 和 Chrome，常用於 iOS 移除內建樣式 */
-  -moz-appearance: none;
-  /* FireFox */
-  appearance: none;
 }
 
 .bg-attachment-fixed {
-  background-attachment: fixed;
+  position: fixed;
 }
 
 .swiper-container-wrapper {
