@@ -11989,7 +11989,7 @@ nav {
   top: 0em;
   width: 100%;
   background: #fff;
-  z-index: 2;
+  z-index: 100;
 }
 
 a {
@@ -12019,7 +12019,6 @@ a {
   width: 90px;
   height: 70px;
   background: transparent;
-  cursor: pointer;
   display: block;
   z-index: 2;
 }
@@ -12083,10 +12082,6 @@ a {
   width: 300px;
 }
 
-#menu:checked ~ .asd {
-  width: 100%;
-}
-
 .menu-list {
   width: 0;
   height: 100vh;
@@ -12097,20 +12092,8 @@ a {
   overflow: hidden;
 }
 
-.asd {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  transition: all 0.6s;
-  overflow: hidden;
-  /*移除預設樣式*/
-  -webkit-appearance: none;
-  /* Safari 和 Chrome，常用於 iOS 移除內建樣式 */
-  -moz-appearance: none;
-  /* FireFox */
-  appearance: none;
+:root {
+  scroll-padding-top: 60px;
 }
 
 /*
@@ -12119,13 +12102,14 @@ a {
 .menu-list ul {
   display: block;
   list-style: none;
-  margin-top: 60px;
+  margin-top: 100px;
   padding: 0;
+  line-height: 100px;
 }
 
 .menu-list ul > li {
   display: block;
-  width: 250px;
+  width: 300px;
   text-align: center;
 }
 
@@ -12133,6 +12117,12 @@ a {
   display: block;
   text-decoration: none;
   color: #000;
+}
+
+.menu-list ul > li > a:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-underline-offset: 6px;
 }
 
 /*

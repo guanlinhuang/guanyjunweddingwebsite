@@ -14,7 +14,7 @@
     top: 0em;
     width: 100%;
     background: #fff;
-    z-index: 2;
+    z-index: 100;
   }
 
   a{
@@ -45,7 +45,7 @@
     width: 90px;
     height: 70px;
     background: transparent;
-    cursor: pointer;
+    // cursor: pointer;
     display: block;
     //padding: 16px;
     // position: fixed; //註解這屬性，就可以跟橫向導覽列一起隱藏
@@ -102,15 +102,89 @@
     transition: top ease .1s, transform ease .1s .1s;
 }
 
+
+// //側邊list叉叉
+// .box5{
+//     position: relative;
+// }
+// .box6{
+//     position: absolute;
+// }
+
+// .line3 {
+//     width: 90px;
+//     height: 70px;
+//     background: transparent;
+//     // cursor: pointer;
+//     display: block;
+//     //padding: 16px;
+//     // position: fixed; //註解這屬性，就可以跟橫向導覽列一起隱藏
+//     z-index: 2;
+// }
+// .line3 .menu,
+// .line3 .menu::before,
+// .line3 .menu::after {
+//     background: #222;
+//     content: '';
+//     display: block;
+//     height: 5px;
+//     border-radius: 5px;
+//     position: absolute;
+//     width: 40px;
+//     top: 0;
+//     transition: top ease .1s, transform ease .1s .1s;
+// }
+// .line3 .menu {
+//     right: 30px;
+//     top: 35px;
+//     background: transparent;
+// }
+
+// .line3 .menu::before {
+    
+// transform: rotate(45deg);
+//     right: 0;
+// }
+
+// .line3 .menu::after {
+    
+//     transform: rotate(-45deg);
+//     right: 0;
+// }
+// /*
+// 點選選單變叉叉
+// */
+// #menu:checked + .line3 .menu {
+//     right: 30px;
+//     z-index: 4;
+//     top: 35px;
+// }
+
+// #menu:checked + .line3 .menu::before {
+//     top: -13px;
+//     right: 5px;
+// }
+
+// #menu:checked + .line3 .menu::after {
+//     top: 13px;
+//     right: -5px;
+// }
+
+// #menu:checked + .line3 .menu::before,
+// #menu:checked + .line3 .menu::after {
+//     transition: background ease .1s, top ease .1s .1s, transform ease .1s;
+// }
+
+
 /*
 選單開合
 */
 #menu:checked ~ .menu-list {
     width: 300px; // 開合方向height或width
 }
-#menu:checked ~ .asd {
-    width: 100%; // 開合方向height或width
-}
+// #menu:checked ~ .asd {
+//     width: 100%; // 開合方向height或width
+// }
 
 
 .menu-list {
@@ -125,20 +199,18 @@
 
 }
 
-.asd{
-    backdrop-filter:blur(5px);
-    height: 100vh;
-    position: fixed;
-    z-index: 1;
-    transition: all .6s;
-    overflow: hidden;
-    /*移除預設樣式*/
-    -webkit-appearance: none;
-    /* Safari 和 Chrome，常用於 iOS 移除內建樣式 */
-    -moz-appearance: none;
-    /* FireFox */
-    appearance: none;
-}
+:root {
+    scroll-padding-top: 60px; //避免滑到指定區塊被nav擋住，70px為橫向nav高度
+  }
+
+// .asd{
+//     backdrop-filter:blur(5px);
+//     height: 100vh;
+//     position: fixed;
+//     z-index: 1;
+//     transition: all .6s;
+//     overflow: hidden;
+// }
 
 /*
 選單向外推
@@ -146,14 +218,15 @@
 .menu-list ul {
     display:block;
     list-style: none;
-    margin-top: 60px;
+    margin-top: 100px;
     padding: 0;
+    line-height: 100px;
   
 }
 
 .menu-list ul>li{
     display:block;
-    width:250px;
+    width:300px;
     text-align: center;
 }
 
@@ -162,6 +235,17 @@
     text-decoration: none;
     color: #000;
 }
+
+.menu-list ul>li>a:hover{
+    text-decoration: underline;
+    text-decoration-color:red;
+    text-underline-offset: 6px;
+
+
+}
+
+
+
 /*
 隱藏核許框
 */
