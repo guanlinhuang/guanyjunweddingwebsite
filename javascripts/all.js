@@ -79,39 +79,141 @@ anime.timeline({ loop: 1 })
 //     }
 //   },
 // });
+// //https://codepen.io/ylem76/pen/VwbRGEg
 
+//相簿1
 $(function () {
   var galleryThumbs = new Swiper(".gallery-thumbs", {
-    centeredSlides: true,
-    centeredSlidesBounds: true, 
-    direction: "horizontal",
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: false,
+    centeredSlides: true, //設定為true時，活動區塊會居中，而不是預設狀態下的居左
+    centeredSlidesBounds: true, //使得投影片居中後，還可以配合設定此參數，使得第一個和最後一個slide 始終貼合邊緣而不會出現缺口。
+    //此選項不適用於loop模式並會使pagination出現異常
+    //loop: true, //會在原本slide前後複製若干個slide(預設一個)並在適當的時候切換，讓Swiper看起來是循環的
+    direction: "horizontal", //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+    spaceBetween: 3, //slide之間的距離
+    slidesPerView: 4, //設定slider容器能夠同時顯示的slides數量
+    freeMode: false, //slide滑動時只滑動一格，並自動貼合wrapper
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     watchOverflow: true,
-    breakpoints: {
-      480: {
-        direction: "vertical",
-        slidesPerView: 3
-      }
-    }
+    // breakpoints: {
+    //   480: {
+    //     direction: "vertical",
+    //     slidesPerView: 3
+    //   }
+    // }
   });
   var galleryTop = new Swiper(".gallery-top", {
     direction: "horizontal",
-    spaceBetween: 10,
+    //loop: true,
+    spaceBetween: 3,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
-    a11y: {
+    a11y: { //輔助，無障礙閱讀。開啟本參數為螢幕閱讀器新增語音提示等訊息，方便視覺障礙者
       prevSlideMessage: "Previous slide",
       nextSlideMessage: "Next slide",
     },
-    keyboard: {
-      enabled: true,
+    // keyboard: { //鍵盤
+    //   enabled: true,
+    // },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+  galleryTop.on("slideChangeTransitionStart", function () {
+    galleryThumbs.slideTo(galleryTop.activeIndex);
+  });
+  galleryThumbs.on("transitionStart", function () {
+    galleryTop.slideTo(galleryThumbs.activeIndex);
+  });
+});
+//https://codepen.io/rogerkuik/pen/abZOLXr
+
+//相簿2
+$(function () {
+  var galleryThumbs = new Swiper(".gallery-thumbs-2", {
+    centeredSlides: true, //設定為true時，活動區塊會居中，而不是預設狀態下的居左
+    centeredSlidesBounds: true, //使得投影片居中後，還可以配合設定此參數，使得第一個和最後一個slide 始終貼合邊緣而不會出現缺口。
+    //此選項不適用於loop模式並會使pagination出現異常
+    //loop: true, //會在原本slide前後複製若干個slide(預設一個)並在適當的時候切換，讓Swiper看起來是循環的
+    direction: "horizontal", //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+    spaceBetween: 3, //slide之間的距離
+    slidesPerView: 3, //設定slider容器能夠同時顯示的slides數量
+    freeMode: false, //slide滑動時只滑動一格，並自動貼合wrapper
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    watchOverflow: true,
+    // breakpoints: {
+    //   480: {
+    //     direction: "vertical",
+    //     slidesPerView: 3
+    //   }
+    // }
+  });
+  var galleryTop = new Swiper(".gallery-top-2", {
+    direction: "horizontal",
+    //loop: true,
+    spaceBetween: 3,
+    navigation: {
+      nextEl: ".swiper-button-next-2",
+      prevEl: ".swiper-button-prev-2"
     },
+    a11y: { //輔助，無障礙閱讀。開啟本參數為螢幕閱讀器新增語音提示等訊息，方便視覺障礙者
+      prevSlideMessage: "Previous slide",
+      nextSlideMessage: "Next slide",
+    },
+    // keyboard: { //鍵盤
+    //   enabled: true,
+    // },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+  galleryTop.on("slideChangeTransitionStart", function () {
+    galleryThumbs.slideTo(galleryTop.activeIndex);
+  });
+  galleryThumbs.on("transitionStart", function () {
+    galleryTop.slideTo(galleryThumbs.activeIndex);
+  });
+});
+
+//相簿3
+$(function () {
+  var galleryThumbs = new Swiper(".gallery-thumbs-3", {
+    centeredSlides: true, //設定為true時，活動區塊會居中，而不是預設狀態下的居左
+    centeredSlidesBounds: true, //使得投影片居中後，還可以配合設定此參數，使得第一個和最後一個slide 始終貼合邊緣而不會出現缺口。
+    //此選項不適用於loop模式並會使pagination出現異常
+    //loop: true, //會在原本slide前後複製若干個slide(預設一個)並在適當的時候切換，讓Swiper看起來是循環的
+    direction: "horizontal", //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+    spaceBetween: 3, //slide之間的距離
+    slidesPerView: 3, //設定slider容器能夠同時顯示的slides數量
+    freeMode: false, //slide滑動時只滑動一格，並自動貼合wrapper
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    watchOverflow: true,
+    // breakpoints: {
+    //   480: {
+    //     direction: "vertical",
+    //     slidesPerView: 3
+    //   }
+    // }
+  });
+  var galleryTop = new Swiper(".gallery-top-3", {
+    direction: "horizontal",
+    //loop: true,
+    spaceBetween: 3,
+    navigation: {
+      nextEl: ".swiper-button-next-3",
+      prevEl: ".swiper-button-prev-3"
+    },
+    a11y: { //輔助，無障礙閱讀。開啟本參數為螢幕閱讀器新增語音提示等訊息，方便視覺障礙者
+      prevSlideMessage: "Previous slide",
+      nextSlideMessage: "Next slide",
+    },
+    // keyboard: { //鍵盤
+    //   enabled: true,
+    // },
     thumbs: {
       swiper: galleryThumbs
     }

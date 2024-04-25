@@ -78,7 +78,7 @@
 //     transform:scale(1.66);
 //   }
 
-$breakpoint: 480px;
+//$breakpoint: 480px;
 // You also need to change the JS breakpoint.
 
 .swiper-container-wrapper {
@@ -117,7 +117,7 @@ $breakpoint: 480px;
 .swiper-button {
   &-next,
   &-prev {
-    color: #000;
+    color: #fff4f7;
   }
 }
 
@@ -159,21 +159,28 @@ $breakpoint: 480px;
   }
 }
 
-//原圖排列
+//大圖排列
 .gallery-top {
   position: relative;
   width: 100%;
-  height: 300px;//75vh;
+  height: 75vh;
 //   @media (min-width: $breakpoint) {
 //     width: 80%;
 //     height: 100vh;
 //     margin-right: 10px;
 //   }
 }
-//縮圖排列
-.gallery-thumbs {
+
+.gallery-top-2 ,.gallery-top-3{
+  position: relative;
   width: 100%;
-  height: 20vh;
+  height: 300px;
+}
+
+//縮圖排列
+.gallery-thumbs, .gallery-thumbs-2, .gallery-thumbs-3{
+  width: 100%;
+  height: 100px;
   padding-top: 10px;
 //   @media (min-width: $breakpoint) {
 //     width: 20%;
@@ -187,15 +194,15 @@ $breakpoint: 480px;
     // }
   }
   .swiper-slide {
-    //width: 25%;
+    width: 25%;
     //flex-flow: row nowrap;
     // @media (min-width: $breakpoint) {
     //   flex-flow: column nowrap;
     //   width: 100%;
     // }
-    height: 50%;//100%;
+    height: 100%;
     opacity: 0.3;//0.75; //透明度
-    cursor: pointer;
+    //cursor: pointer;
   }
   .swiper-slide-thumb-active {
     opacity: 1;

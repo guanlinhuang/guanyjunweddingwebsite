@@ -12158,7 +12158,7 @@ input#menu {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: #000;
+  color: #fff4f7;
 }
 
 .swiper-slide {
@@ -12198,22 +12198,28 @@ input#menu {
 .gallery-top {
   position: relative;
   width: 100%;
+  height: 75vh;
+}
+
+.gallery-top-2, .gallery-top-3 {
+  position: relative;
+  width: 100%;
   height: 300px;
 }
 
-.gallery-thumbs {
+.gallery-thumbs, .gallery-thumbs-2, .gallery-thumbs-3 {
   width: 100%;
-  height: 20vh;
+  height: 100px;
   padding-top: 10px;
 }
-.gallery-thumbs .swiper-wrapper {
+.gallery-thumbs .swiper-wrapper, .gallery-thumbs-2 .swiper-wrapper, .gallery-thumbs-3 .swiper-wrapper {
   flex-direction: row;
 }
-.gallery-thumbs .swiper-slide {
-  height: 50%;
+.gallery-thumbs .swiper-slide, .gallery-thumbs-2 .swiper-slide, .gallery-thumbs-3 .swiper-slide {
+  width: 25%;
+  height: 100%;
   opacity: 0.3;
-  cursor: pointer;
 }
-.gallery-thumbs .swiper-slide-thumb-active {
+.gallery-thumbs .swiper-slide-thumb-active, .gallery-thumbs-2 .swiper-slide-thumb-active, .gallery-thumbs-3 .swiper-slide-thumb-active {
   opacity: 1;
 }/*# sourceMappingURL=all.css.map */
