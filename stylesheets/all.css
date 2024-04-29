@@ -11968,14 +11968,30 @@ textarea.form-control-lg {
 
 @font-face {
   font-family: ZapfinoLinotypeOne;
-  src: url("../fonts/ZapfinoLinotypeOne.woff2") format("woff2");
+  src: url("/fonts/ZapfinoLinotypeOne.woff2") format("woff2");
 }
-.font-family {
+.font-family-ZapfinoLinotypeOne {
   font-family: "ZapfinoLinotypeOne";
 }
 
+@font-face {
+  font-family: jfopenhuninn2;
+  src: url("/fonts/jf-openhuninn-2.0.ttf") format("truetype");
+}
+.font-family-jfopenhuninn2 {
+  font-family: "jfopenhuninn2";
+}
+
+@font-face {
+  font-family: 華康秀風體;
+  src: url("/fonts/華康秀風體.woff") format("woff");
+}
+.font-family-aaa {
+  font-family: "華康秀風體";
+}
+
 .box {
-  height: 70px;
+  height: 65px;
 }
 
 * {
@@ -11997,7 +12013,7 @@ a {
 }
 
 .logo {
-  height: 70px;
+  height: 65px;
   padding-left: 15px;
 }
 
@@ -12009,7 +12025,7 @@ a {
 
 .up {
   transition: all 400ms;
-  height: 70px;
+  height: 65x;
 }
 
 /*
@@ -12017,10 +12033,12 @@ a {
 */
 .line {
   width: 90px;
-  height: 70px;
+  height: 65px;
   background: transparent;
   display: block;
   z-index: 2;
+  display: flex;
+  justify-content: end;
 }
 
 .line .menu,
@@ -12037,19 +12055,21 @@ a {
 }
 
 .line .menu {
-  right: 30px;
+  right: 20px;
   z-index: 4;
-  top: 35px;
+  top: 32px;
 }
 
 .line .menu::before {
-  top: -13px;
-  right: 5px;
+  top: -10px;
+  width: 30px;
+  right: 0;
 }
 
 .line .menu::after {
-  top: 13px;
-  right: -5px;
+  top: 10px;
+  width: 50px;
+  right: 0;
 }
 
 /*
@@ -12062,11 +12082,13 @@ a {
 #menu:checked + .line .menu::before {
   transform: rotate(45deg);
   right: 0;
+  width: 40px;
 }
 
 #menu:checked + .line .menu::after {
   transform: rotate(-45deg);
   right: 0;
+  width: 40px;
 }
 
 #menu:checked + .line .menu::before,
@@ -12140,6 +12162,10 @@ input#menu {
 
 .bg-attachment-fixed {
   position: fixed;
+}
+
+.text-align {
+  text-align: justify;
 }
 
 .swiper-container-wrapper {
@@ -12222,4 +12248,53 @@ input#menu {
 }
 .gallery-thumbs .swiper-slide-thumb-active, .gallery-thumbs-2 .swiper-slide-thumb-active, .gallery-thumbs-3 .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.blessing .input {
+  caret-color: #FF1744;
+  /* 指定色 */
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: solid #D0D0D0;
+  border-radius: 0%;
+}
+
+.blessing input:focus {
+  border-bottom: solid #FF1744;
+}
+
+.blessing textarea {
+  width: 100%;
+  outline: none;
+  border: solid #D0D0D0;
+}
+
+.blessing textarea:focus {
+  border: solid #FF1744;
+}
+
+.blessing .submit,
+.blessing .sheet {
+  color: #fff;
+  background-color: #FF1744;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 25px;
+  /*移除預設樣式*/
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於 iOS 移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
+}
+
+.blessing .sheet {
+  padding: 0;
+}
+
+.blessing .sheet a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 25px;
 }/*# sourceMappingURL=all.css.map */
