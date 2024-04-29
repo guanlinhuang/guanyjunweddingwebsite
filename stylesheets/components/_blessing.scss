@@ -9,22 +9,22 @@
     // margin: 10px;
     outline: none;
     border: none;
-    border-bottom: solid #D0D0D0;
+    border-bottom: solid 1px #D0D0D0;
     border-radius: 0%;
 }
 
 .blessing input:focus {
-    border-bottom: solid #FF1744;
+    border-bottom: solid 1px #FF1744;
 }
 
 .blessing textarea {
     width: 100%;
     outline: none;
-    border: solid #D0D0D0;
+    border: solid 1px #D0D0D0;
 }
 
 .blessing textarea:focus {
-    border: solid #FF1744;
+    border: solid 1px #FF1744;
 }
 
 .blessing .submit,
@@ -34,13 +34,6 @@
     border: none;
     border-radius: 5px;
     padding: 5px 25px;
-
-    /*移除預設樣式*/
-    -webkit-appearance: none;
-    /* Safari 和 Chrome，常用於 iOS 移除內建樣式 */
-    -moz-appearance: none;
-    /* FireFox */
-    appearance: none;
 }
 
 .blessing .sheet {
@@ -48,6 +41,7 @@
 }
 
 .blessing .sheet a {
+    text-align: center;
     text-decoration: none;
     color: #fff;
     padding: 5px 25px;
