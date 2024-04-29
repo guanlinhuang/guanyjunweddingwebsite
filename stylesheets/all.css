@@ -11976,7 +11976,7 @@ body {
 }
 
 .wrap {
-  font-family: "jfopenhuninn2";
+  font-family: jfopenhuninn2;
   color: #7F4F21;
 }
 
@@ -11985,7 +11985,7 @@ body {
   src: url("/fonts/ZapfinoLinotypeOne.woff2") format("woff2");
 }
 .font-family-ZapfinoLinotypeOne {
-  font-family: "ZapfinoLinotypeOne";
+  font-family: ZapfinoLinotypeOne;
 }
 
 @font-face {
@@ -11993,7 +11993,7 @@ body {
   src: url("/fonts/jf-openhuninn-2.0.ttf") format("truetype");
 }
 .font-family-jfopenhuninn2 {
-  font-family: "jfopenhuninn2";
+  font-family: jfopenhuninn2;
 }
 
 @font-face {
@@ -12001,7 +12001,7 @@ body {
   src: url("/fonts/華康秀風體.woff") format("woff");
 }
 .font-family-aaa {
-  font-family: "華康秀風體";
+  font-family: 華康秀風體;
 }
 
 .box {
