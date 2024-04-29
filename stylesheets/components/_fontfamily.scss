@@ -26,3 +26,9 @@
 .font-family-aaa{
     font-family: '華康秀風體'
 }
+
+//字體無法載入原因
+//根目錄下的node_modules文件下的bootstrap下的dis文件夾沒有fonts文件夾
+//解決方法
+//重新npm i bootstrap@5.3.3
+//然後直接在index.html加style
