@@ -223,11 +223,14 @@ function GoogleForm() { //這裡要對應到自己的 javascript 名稱
    statusCode: {
     0: function() {
      alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
-     //window.location.assign("http://google.com"); //送出表單後的導向
+     //window.location.assign("#"); //送出表單後的導向
+     window.location.reload();//送出表單後頁面刷新
     },
+
     200: function() {
      alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
      //window.location.assign("http://google.com"); //送出表單後的導向
+     window.location.reload();//送出表單後頁面刷新
     }
    }
   });

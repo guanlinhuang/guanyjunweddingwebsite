@@ -11976,7 +11976,7 @@ body {
 }
 
 .wrap {
-  color: #7F4F21;
+  color: #735751;
 }
 
 .box {
@@ -12151,6 +12151,11 @@ input#menu {
 
 .bg-attachment-fixed {
   position: fixed;
+}
+
+.cover p {
+  text-shadow: rgb(42, 41, 38) 1px 0 10px;
+  color: #E7d7C1;
 }
 
 .text-align {
