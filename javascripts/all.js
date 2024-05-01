@@ -8,13 +8,13 @@ anime.timeline({ loop: 1 })
     duration: 800,
     delay: (el, i) => 800 * i
   })
-  // .add({
-  //   targets: '.cover',
-  //   opacity: 0,
-  //   duration: 1000,
-  //   easing: "easeOutExpo",
-  //   delay: 1000
-  // });
+// .add({
+//   targets: '.cover',
+//   opacity: 0,
+//   duration: 1000,
+//   easing: "easeOutExpo",
+//   delay: 1000
+// });
 // 要載入正確的js <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
 
@@ -212,26 +212,36 @@ function GoogleForm() { //這裡要對應到自己的 javascript 名稱
   var field2 = $("[name='Connection']").val();
   var field3 = $("[name='Text']").val();
   $.ajax({
-   url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_j1pL30Hab_ETr0-ACaueuS4xUraGPiPOzelKTZBEmXSymw/formResponse", //Google Form 裡面的 form action 網址 ＊＊記得要填＊＊
-   data: { //Google Form 裡面的欄位 name ＊＊記得要改＊＊
-    "entry.565983712": field1,
-    "entry.2119774223":field2,
-    "entry.1498531925": field3
-   },
-   type: "POST",
-   dataType: "xml",
-   statusCode: {
-    0: function() {
-     alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
-     //window.location.assign("#"); //送出表單後的導向
-     window.location.reload();//送出表單後頁面刷新
+    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_j1pL30Hab_ETr0-ACaueuS4xUraGPiPOzelKTZBEmXSymw/formResponse", //Google Form 裡面的 form action 網址 ＊＊記得要填＊＊
+    data: { //Google Form 裡面的欄位 name ＊＊記得要改＊＊
+      "entry.565983712": field1,
+      "entry.2119774223": field2,
+      "entry.1498531925": field3
     },
+    type: "POST",
+    dataType: "xml",
+    statusCode: {
+      0: function () {
+        alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
+        //window.location.assign("#"); //送出表單後的導向
+        window.location.reload();//送出表單後頁面刷新
+      },
 
-    200: function() {
-     alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
-     //window.location.assign("http://google.com"); //送出表單後的導向
-     window.location.reload();//送出表單後頁面刷新
+      200: function () {
+        alert("謝謝您們的祝福!"); //完成送出表單的警告視窗
+        //window.location.assign("http://google.com"); //送出表單後的導向
+        window.location.reload();//送出表單後頁面刷新
+      }
     }
-   }
   });
- }
+}
+
+//禁止手機長按圖片儲存
+const noSaveImages = document.querySelectorAll('.no-save-image');
+noSaveImages.forEach(image => {
+  image.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
+});
+//以上程式碼將為具有 no-save-image 類別的圖像元素添加一組CSS規則，以停用預設的長按選單。
+//同時，使用JavaScript監聽右鍵點擊事件，並透過呼叫preventDefault()方法來阻止預設行為。

@@ -5,16 +5,84 @@ body {
     -moz-appearance: none;
     /* FireFox */
     appearance: none;
+    user-select: none;
+}
+
+.no-save-image { //禁止手機長按圖片儲存
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title {
+    width: 200px;
+    height: 80px;
+    // border: 2px solid #000;
+}
+
+.titlebox1 {
+    width: 165px;
+    height: 55px;
+    background: #F2E3CE;
+    top: 3px;
+    left: 23px;
+    z-index: 3;
+    border-radius: 7px;
+    text-align: center;
+    padding: auto;
+}
+
+.titlebox2 {
+    width: 170px;
+    height: 60px;
+    background: #fff;
+    z-index: 2;
+    /* border: #000 1px solid; */
+    border-radius: 10px;
+    left: 20px;
+}
+
+.titlebox3 {
+    width: 170px;
+    height: 55px;
+    background: #8C1C13;
+    z-index: 1;
+    top: 11px;
+    left: 26px;
+    border-radius: 10px;
+}
+
+.line1 {
+    width: 3px;
+    height: 65px;
+    background: #BF4342;
+    top: 3px;
 }
 
 .line2 {
-    width: 70px;
-    height: 2px;
-    background: red;
+    width: 20px;
+    height: 5px;
+    background: #BF4342;
+    top: 18px;
 }
+
+.line3 {
+    width: 20px;
+    height: 5px;
+    background: #BF4342;
+    top: 48px;
+}
+
+
 
 .wrap {
     // font-family: jfopenhuninn2;
     color: #735751;
 }
 
+h2 {
+    letter-spacing: 0.3em;
+}

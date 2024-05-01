@@ -1,7 +1,7 @@
 .blessing .input {
     // caret-color: auto; /* 預設 */
     // caret-color: transparent; /* 透明 */
-    caret-color: #FF1744;
+    caret-color: #BF4342;
     /* 指定色 */
 
     width: 100%;
@@ -14,7 +14,7 @@
 }
 
 .blessing input:focus {
-    border-bottom: solid 1px #FF1744;
+    border-bottom: solid 1px #BF4342;
 }
 
 .blessing textarea {
@@ -24,13 +24,13 @@
 }
 
 .blessing textarea:focus {
-    border: solid 1px #FF1744;
+    border: solid 1px #BF4342;
 }
 
 .blessing .submit,
 .blessing .sheet {
     color: #fff;
-    background-color: #FF1744;
+    background-color: #BF4342;
     border: none;
     border-radius: 5px;
     padding: 5px 25px;
